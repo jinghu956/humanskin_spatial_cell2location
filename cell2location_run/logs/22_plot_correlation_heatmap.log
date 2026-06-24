@@ -1,0 +1,23 @@
+nohup: ignoring input
+Saved:
+cell2location_run/results/figures/correlation_heatmap/correlation_heatmap.png
+cell2location_run/results/figures/correlation_heatmap/correlation_heatmap.pdf
+cell2location_run/results/marker_abundance_correlation_heatmap_values.csv
+
+Heatmap values:
+                       Spearman\nAbs  ...  Pearson\nRelative
+celltype                              ...                   
+Fibroblast                  0.521448  ...           0.237040
+Macrophage                  0.345593  ...           0.165454
+Mural cell                  0.358548  ...           0.156052
+B cell                      0.392036  ...           0.056848
+Vascular endothelium        0.192824  ...           0.182998
+Keratinocytes               0.651035  ...           0.131921
+T cell                      0.173951  ...           0.195064
+DC                          0.186409  ...           0.031263
+Lymphatic endothelium       0.107250  ...           0.100930
+Melanocyte                  0.104393  ...           0.019818
+Mast cell                   0.028404  ...           0.013010
+Schwann cell                0.309338  ...          -0.000410
+
+[12 rows x 4 columns]

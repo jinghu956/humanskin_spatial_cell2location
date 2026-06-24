@@ -1,0 +1,20 @@
+nohup: ignoring input
+Relative abundance range summary:
+                        count      mean  ...  p95_minus_p05  p99_minus_p01
+Keratinocytes          1691.0  0.256911  ...       0.242062       0.358090
+Schwann cell           1691.0  0.176542  ...       0.177625       0.292177
+Fibroblast             1691.0  0.065829  ...       0.103664       0.159061
+B cell                 1691.0  0.064418  ...       0.095789       0.159980
+Mast cell              1691.0  0.098176  ...       0.092223       0.162395
+Melanocyte             1691.0  0.066659  ...       0.089272       0.155074
+DC                     1691.0  0.048451  ...       0.077950       0.119433
+Lymphatic endothelium  1691.0  0.045552  ...       0.066447       0.110456
+Vascular endothelium   1691.0  0.036765  ...       0.064646       0.121585
+Macrophage             1691.0  0.042881  ...       0.063340       0.113031
+Mural cell             1691.0  0.035390  ...       0.051602       0.099632
+ILC                    1691.0  0.031445  ...       0.031405       0.059091
+T cell                 1691.0  0.030980  ...       0.030838       0.054785
+
+[13 rows x 17 columns]
+
+Saved: cell2location_run/results/cell_abundance_relative_range_summary.csv

@@ -1,0 +1,87 @@
+[05_train_reference_regression.py]
+
+Command:
+CUDA_VISIBLE_DEVICES=0 python cell2location_run/scripts/05_train_reference_regression.py
+
+Purpose:
+Train the cell2location RegressionModel on the downsampled broad adult skin reference and export the cell type signatures.
+
+Input:
+cell2location_run/processed/ref_broad_adult_downsample.h5ad
+
+labels_key:
+annotation_broad_adult
+
+Reference shape:
+(51485, 36611)
+
+Cell type counts:
+DC                       5000
+ILC                      5000
+Fibroblast               5000
+Keratinocytes            5000
+Lymphatic endothelium    5000
+Vascular endothelium     5000
+Macrophage               5000
+T cell                   5000
+Mural cell               5000
+Melanocyte               3724
+B cell                   1487
+Mast cell                 715
+Schwann cell              559
+
+GPU information:
+CUDA available: True
+GPU device count: 1
+Using GPU: NVIDIA A800-SXM4-80GB
+GPU available: True (cuda), used: True
+CUDA_VISIBLE_DEVICES: [0]
+
+Training parameters:
+max_epochs: 250
+batch_size: 2500
+train_size: 1
+accelerator: gpu
+
+Training time:
+42 minutes 21 seconds
+
+Training status:
+Epoch 250/250 completed.
+max_epochs=250 reached.
+Training finished successfully.
+
+Posterior export:
+num_samples: 1000
+batch_size: 2500
+accelerator: gpu
+
+Output files:
+cell2location_run/models/reference_regression_broad_adult
+cell2location_run/processed/ref_broad_adult_regression_trained.h5ad
+cell2location_run/processed/inf_aver_broad_adult.csv
+
+Signature shape:
+(36611, 13)
+
+Meaning:
+36611 genes x 13 broad adult skin cell types
+
+Cell types in signature:
+B cell
+DC
+Fibroblast
+ILC
+Keratinocytes
+Lymphatic endothelium
+Macrophage
+Mast cell
+Melanocyte
+Mural cell
+Schwann cell
+T cell
+Vascular endothelium
+
+Conclusion:
+Reference RegressionModel training was successful.
+The 13-cell-type reference signature was generated successfully.

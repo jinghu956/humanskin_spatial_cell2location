@@ -1,0 +1,67 @@
+[02_prepare_spatial_rna.py]
+
+Command:
+python cell2location_run/scripts/02_prepare_spatial_rna.py
+
+Purpose:
+Prepare the spatial RNA matrix as an AnnData object for downstream cell2location analysis.
+
+Input files:
+input/GSM6578065_humanskin_RNA.tsv
+input/spatial_barcodes_index.txt
+
+Spatial RNA matrix format:
+spot x gene
+
+First rows showed:
+X      MIR1302.11  RP11.34P13.7  AL627309.1 ...
+15x34  1           0             0
+34x34  0           1             0
+19x30  0           0             0
+
+Original spatial RNA dataframe:
+(1691, 15486)
+
+After removing ERCC genes:
+(1691, 15471)
+
+Meaning:
+1691 spatial spots x 15471 genes
+
+Coordinate matching:
+Barcode file spots: 2500
+Spatial RNA spots: 1691
+Overlap spots: 1691
+RNA spots not in barcode file: 0
+Barcode spots not in RNA matrix: 809
+
+Interpretation:
+The chip contains 2500 theoretical spatial positions.
+The RNA matrix contains 1691 expressed or retained spots.
+All 1691 RNA spots have matched spatial coordinates.
+The remaining 809 barcode positions are likely empty or filtered spots.
+
+Example spot IDs:
+15x34
+34x34
+19x30
+31x35
+6x22
+
+Example genes:
+MIR1302.11
+RP11.34P13.7
+AL627309.1
+AP006222.2
+RP4.669L17.10
+RP11.206L10.9
+LINC00115
+RP11.206L10.11
+RP11.54O7.3
+SAMD11
+
+Output file:
+cell2location_run/processed/spatial_rna.h5ad
+
+Conclusion:
+Spatial RNA AnnData was successfully generated.

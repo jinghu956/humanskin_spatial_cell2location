@@ -1,0 +1,61 @@
+[Reference atlas check]
+
+Input file:
+reference_atlas/adult_skin_atlas.h5ad
+
+adata shape:
+(197812, 36611)
+
+Meaning:
+197,812 cells × 36,611 genes
+
+obs columns include:
+day
+strain
+n_counts
+log1p_n_counts
+n_genes
+log1p_n_genes
+percent_mito
+n_counts_mito
+percent_ribo
+n_counts_ribo
+percent_hb
+n_counts_hb
+donor
+sanger_id
+doublet_scores
+predicted_doublets
+leiden
+S_score
+G2M_score
+phase
+pcw
+origin
+chemistry
+gender
+sorting
+sample
+annotation_fine
+annotation_verybroad
+annotation_broad
+annotation_fine_adult
+annotation_fine_adult_v2
+annotation_broad_adult
+annotation_broad_merged
+annotation_verybroad_merged
+
+var columns:
+[]
+
+Example genes:
+A1BG
+A1BG-AS1
+A1CF
+A2M
+A2M-AS1
+
+Conclusion:
+Reference atlas can be loaded successfully.
+Gene names are gene symbols.
+The atlas is suitable as scRNA-seq reference for cell2location.

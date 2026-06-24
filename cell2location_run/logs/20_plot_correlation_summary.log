@@ -1,0 +1,17 @@
+nohup: ignoring input
+Saved: cell2location_run/results/figures/correlation_plots/correlation_summary_barplot.png
+                 celltype  ...  pearson_relative_abundance_vs_marker
+11           Schwann cell  ...                             -0.000410
+10              Mast cell  ...                              0.013010
+9              Melanocyte  ...                              0.019818
+8   Lymphatic endothelium  ...                              0.100930
+7                      DC  ...                              0.031263
+6                  T cell  ...                              0.195064
+5           Keratinocytes  ...                              0.131921
+4    Vascular endothelium  ...                              0.182998
+3                  B cell  ...                              0.056848
+2              Mural cell  ...                              0.156052
+1              Macrophage  ...                              0.165454
+0              Fibroblast  ...                              0.237040
+
+[12 rows x 3 columns]

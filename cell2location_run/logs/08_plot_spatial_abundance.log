@@ -1,0 +1,4 @@
+nohup: ignoring input
+Cell types:
+['B cell', 'DC', 'Fibroblast', 'ILC', 'Keratinocytes', 'Lymphatic endothelium', 'Macrophage', 'Mast cell', 'Melanocyte', 'Mural cell', 'Schwann cell', 'T cell', 'Vascular endothelium']
+Saved figures to: cell2location_run/results/figures/spatial_abundance

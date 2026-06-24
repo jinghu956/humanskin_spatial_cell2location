@@ -1,0 +1,61 @@
+[Annotation summary]
+
+Candidate annotation columns:
+
+annotation_fine:
+non-null cells: 197812
+number of categories: 1
+Note: all values are string "nan"; not recommended.
+
+annotation_broad:
+non-null cells: 0
+number of categories: 0
+Note: all values are NaN; not recommended.
+
+annotation_verybroad:
+non-null cells: 0
+number of categories: 0
+Note: all values are NaN; not recommended.
+
+annotation_fine_adult:
+non-null cells: 197812
+number of categories: 45
+Note: fine-grained adult skin annotation.
+
+annotation_fine_adult_v2:
+non-null cells: 197812
+number of categories: 41
+Note: improved fine-grained adult skin annotation.
+
+annotation_broad_adult:
+non-null cells: 197812
+number of categories: 13
+Note: recommended for first-round cell2location analysis.
+
+annotation_verybroad_adult:
+non-null cells: 144709
+number of categories: 5
+NaN cells: 53103
+Note: too broad and contains many NaN cells.
+
+annotation_broad_adult cell type counts:
+Keratinocytes            53103
+T cell                   35979
+DC                       28053
+Vascular endothelium     26390
+Fibroblast               17833
+Macrophage               12897
+ILC                       7015
+Lymphatic endothelium     5029
+Mural cell                5028
+Melanocyte                3724
+B cell                    1487
+Mast cell                  715
+Schwann cell               559
+
+Selected labels_key:
+annotation_broad_adult
+
+Conclusion:
+annotation_broad_adult was selected as the first-round cell type label.
+It contains 13 adult skin major cell types and covers all 197,812 cells.

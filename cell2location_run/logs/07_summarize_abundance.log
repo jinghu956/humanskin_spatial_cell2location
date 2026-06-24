@@ -1,0 +1,46 @@
+nohup: ignoring input
+Original abundance shape: (1691, 13)
+Original columns:
+['q05cell_abundance_w_sf_B cell', 'q05cell_abundance_w_sf_DC', 'q05cell_abundance_w_sf_Fibroblast', 'q05cell_abundance_w_sf_ILC', 'q05cell_abundance_w_sf_Keratinocytes', 'q05cell_abundance_w_sf_Lymphatic endothelium', 'q05cell_abundance_w_sf_Macrophage', 'q05cell_abundance_w_sf_Mast cell', 'q05cell_abundance_w_sf_Melanocyte', 'q05cell_abundance_w_sf_Mural cell', 'q05cell_abundance_w_sf_Schwann cell', 'q05cell_abundance_w_sf_T cell', 'q05cell_abundance_w_sf_Vascular endothelium']
+
+Clean columns:
+['B cell', 'DC', 'Fibroblast', 'ILC', 'Keratinocytes', 'Lymphatic endothelium', 'Macrophage', 'Mast cell', 'Melanocyte', 'Mural cell', 'Schwann cell', 'T cell', 'Vascular endothelium']
+
+Saved:
+cell2location_run/results/cell_abundance_broad_adult_clean.csv
+cell2location_run/results/cell_abundance_broad_adult_with_coords.csv
+cell2location_run/results/cell_abundance_broad_adult_summary.csv
+cell2location_run/results/spot_dominant_celltype.csv
+
+Cell type abundance summary:
+                       mean_abundance  ...  nonzero_spots
+Keratinocytes                1.513680  ...           1691
+Schwann cell                 0.926544  ...           1691
+Mast cell                    0.526140  ...           1691
+B cell                       0.451462  ...           1691
+Fibroblast                   0.433703  ...           1691
+Melanocyte                   0.395565  ...           1691
+DC                           0.346281  ...           1691
+Lymphatic endothelium        0.308323  ...           1691
+Macrophage                   0.292704  ...           1691
+Vascular endothelium         0.254624  ...           1691
+Mural cell                   0.231414  ...           1691
+ILC                          0.205584  ...           1691
+T cell                       0.205197  ...           1691
+
+[13 rows x 5 columns]
+
+Dominant cell type counts:
+dominant_celltype
+Keratinocytes            1321
+Schwann cell              302
+Mast cell                  17
+Melanocyte                 15
+B cell                     13
+Fibroblast                  9
+Mural cell                  4
+Lymphatic endothelium       3
+Vascular endothelium        3
+DC                          3
+Macrophage                  1
+Name: count, dtype: int64

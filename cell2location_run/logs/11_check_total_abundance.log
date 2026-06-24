@@ -1,0 +1,12 @@
+nohup: ignoring input
+Total abundance summary:
+count    1691.000000
+mean        6.091220
+std         9.482408
+min         0.060198
+25%         1.100679
+50%         2.191692
+75%         5.937090
+max        71.135954
+Name: total_abundance, dtype: float64
+Saved: cell2location_run/results/figures/qc/total_abundance_spatial.png

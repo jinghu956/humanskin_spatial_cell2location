@@ -1,0 +1,18 @@
+nohup: ignoring input
+Saved: cell2location_run/results/figures/global_cell_abundance_barplot.png
+                       mean_abundance  ...  nonzero_spots
+T cell                       0.205197  ...           1691
+ILC                          0.205584  ...           1691
+Mural cell                   0.231414  ...           1691
+Vascular endothelium         0.254624  ...           1691
+Macrophage                   0.292704  ...           1691
+Lymphatic endothelium        0.308323  ...           1691
+DC                           0.346281  ...           1691
+Melanocyte                   0.395565  ...           1691
+Fibroblast                   0.433703  ...           1691
+B cell                       0.451462  ...           1691
+Mast cell                    0.526140  ...           1691
+Schwann cell                 0.926544  ...           1691
+Keratinocytes                1.513680  ...           1691
+
+[13 rows x 5 columns]

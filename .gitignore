@@ -1,0 +1,29 @@
+# System files
+.DS_Store
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Original input data and reference atlas
+input/
+reference_atlas/
+
+# Large derived AnnData files
+*.h5ad
+*.h5
+*.loom
+
+# Large or environment-specific cache/checkpoint files
+*.pkl
+*.pickle
+*.npz
+*.npy
+*.pt
+*.pth
+*.ckpt
+
+# Keep lightweight processed tables, logs, scripts, models, figures, and CSV results tracked.
+!cell2location_run/processed/inf_aver_broad_adult.csv
+!cell2location_run/models/
+!cell2location_run/models/**/
+!cell2location_run/models/**/model.pt

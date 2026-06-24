@@ -1,0 +1,68 @@
+[Reference downsampling]
+
+Input file:
+reference_atlas/adult_skin_atlas.h5ad
+
+labels_key:
+annotation_broad_adult
+
+Reason for downsampling:
+The original reference contains 197,812 cells × 36,611 genes.
+To reduce computation time, memory/GPU usage, and avoid dominance by very large cell types, each broad cell type was capped at 5000 cells.
+Cell types with fewer than 5000 cells were fully retained.
+
+Original filtered reference:
+(197812, 36611)
+
+Original cell type counts:
+Keratinocytes            53103
+T cell                   35979
+DC                       28053
+Vascular endothelium     26390
+Fibroblast               17833
+Macrophage               12897
+ILC                       7015
+Lymphatic endothelium     5029
+Mural cell                5028
+Melanocyte                3724
+B cell                    1487
+Mast cell                  715
+Schwann cell               559
+
+Downsampled reference:
+(51485, 36611)
+
+Downsampled cell type counts:
+DC                       5000
+ILC                      5000
+Fibroblast               5000
+Keratinocytes            5000
+Lymphatic endothelium    5000
+Vascular endothelium     5000
+Macrophage               5000
+T cell                   5000
+Mural cell               5000
+Melanocyte               3724
+B cell                   1487
+Mast cell                 715
+Schwann cell              559
+
+Important correction:
+The original adata.X contained log-normalized expression values.
+Raw count data were found in adata.raw.X.
+
+adata.X:
+integer values: False
+
+adata.raw.X:
+integer values: True
+min: 1.0
+max: 8294.0
+
+Therefore, adata.raw.X was used to construct the final reference AnnData for RegressionModel training.
+
+Output file:
+cell2location_run/processed/ref_broad_adult_downsample.h5ad
+
+Conclusion:
+Downsampled reference using raw counts was successfully prepared.

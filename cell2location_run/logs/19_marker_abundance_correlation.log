@@ -1,0 +1,21 @@
+nohup: ignoring input
+Saved:
+cell2location_run/results/marker_abundance_correlation_summary.csv
+cell2location_run/results/marker_module_scores_with_coords.csv
+
+Correlation summary:
+                 celltype  ... pearson_relative_pvalue
+1              Fibroblast  ...            5.009042e-23
+3              Macrophage  ...            7.595918e-12
+7              Mural cell  ...            1.104062e-10
+11                 B cell  ...            1.939588e-02
+5    Vascular endothelium  ...            3.356377e-14
+0           Keratinocytes  ...            5.191041e-08
+2                  T cell  ...            5.805723e-16
+4                      DC  ...            1.988071e-01
+6   Lymphatic endothelium  ...            3.210950e-05
+8              Melanocyte  ...            4.154040e-01
+9               Mast cell  ...            5.929026e-01
+10           Schwann cell  ...            9.865444e-01
+
+[12 rows x 11 columns]

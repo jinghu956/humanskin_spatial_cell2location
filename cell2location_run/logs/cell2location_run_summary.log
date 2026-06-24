@@ -1,0 +1,95 @@
+[cell2location analysis summary]
+
+Project directory:
+~/human_skin_for_hj
+
+Conda environment:
+cell2loc_env
+
+Main package versions:
+cell2location 0.1.5
+scvi-tools 1.3.3
+scanpy 1.11.5
+anndata 0.11.4
+torch 2.5.1+cu121
+
+GPU:
+NVIDIA A800-SXM4-80GB
+CUDA available: True
+
+Reference atlas:
+reference_atlas/adult_skin_atlas.h5ad
+197812 cells × 36611 genes
+
+Selected reference label:
+annotation_broad_adult
+
+Number of cell types:
+13
+
+Selected cell types:
+Keratinocytes
+T cell
+DC
+Vascular endothelium
+Fibroblast
+Macrophage
+ILC
+Lymphatic endothelium
+Mural cell
+Melanocyte
+B cell
+Mast cell
+Schwann cell
+
+Spatial RNA:
+input/GSM6578065_humanskin_RNA.tsv
+
+Spatial RNA format:
+spot × gene
+
+Spatial RNA shape:
+1691 spots × 15486 genes
+
+After removing ERCC:
+1691 spots × 15471 genes
+
+Spatial coordinate file:
+input/spatial_barcodes_index.txt
+
+Coordinate matching:
+RNA spots: 1691
+Barcode spots: 2500
+Overlap: 1691
+All RNA spots matched spatial coordinates.
+
+Gene overlap:
+Reference genes: 36611
+Spatial genes: 15471
+Shared genes: 12846
+
+Reference downsampling:
+Original: 197812 cells × 36611 genes
+Downsampled: 51485 cells × 36611 genes
+Strategy: each broad cell type capped at 5000 cells; smaller cell types retained fully.
+
+Raw count correction:
+adata.X was log-normalized and unsuitable for RegressionModel.
+adata.raw.X contained integer raw counts and was used for reference training.
+
+Reference RegressionModel:
+Training completed successfully.
+Epochs: 250
+Runtime: 42 minutes 21 seconds
+GPU used: NVIDIA A800-SXM4-80GB
+
+Reference signature:
+cell2location_run/processed/inf_aver_broad_adult.csv
+Shape: 36611 genes × 13 cell types
+
+Current status:
+Reference training completed.
+Ready to run spatial Cell2location model.
+
+Next command:
+nohup env CUDA_VISIBLE_DEVICES=0 python -u cell2location_run/scripts/06_run_cell2location_broad.py > cell2location_run/logs/06_run_cell2location_broad.log 2>&1 &

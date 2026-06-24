@@ -1,0 +1,81 @@
+[04_prepare_reference_broad_downsample.py]
+
+Command:
+python cell2location_run/scripts/04_prepare_reference_broad_downsample.py
+
+Purpose:
+Prepare a broad adult skin reference AnnData using raw counts and downsample large cell types.
+
+Input file:
+reference_atlas/adult_skin_atlas.h5ad
+
+Output file:
+cell2location_run/processed/ref_broad_adult_downsample.h5ad
+
+labels_key:
+annotation_broad_adult
+
+Downsampling parameter:
+max_cells_per_type: 5000
+random_state: 0
+
+Reason for downsampling:
+The original reference contains 197812 cells x 36611 genes.
+To reduce computation time, memory/GPU usage, and avoid dominance by very large cell types, each broad cell type was capped at 5000 cells.
+Cell types with fewer than 5000 cells were fully retained.
+
+Original adata:
+(197812, 36611)
+
+raw exists:
+True
+
+Important correction:
+The original adata.X contained log-normalized expression values.
+Raw count data were found in adata.raw.X.
+adata.raw.X was used to construct the final reference AnnData for RegressionModel training.
+
+Original filtered reference using raw counts:
+(197812, 36611)
+
+Original cell type counts:
+Keratinocytes            53103
+T cell                   35979
+DC                       28053
+Vascular endothelium     26390
+Fibroblast               17833
+Macrophage               12897
+ILC                       7015
+Lymphatic endothelium     5029
+Mural cell                5028
+Melanocyte                3724
+B cell                    1487
+Mast cell                  715
+Schwann cell               559
+
+Downsampled reference:
+(51485, 36611)
+
+Downsampled cell type counts:
+DC                       5000
+ILC                      5000
+Fibroblast               5000
+Keratinocytes            5000
+Lymphatic endothelium    5000
+Vascular endothelium     5000
+Macrophage               5000
+T cell                   5000
+Mural cell               5000
+Melanocyte               3724
+B cell                   1487
+Mast cell                 715
+Schwann cell              559
+
+Count check:
+adata.X integer values before correction: False
+adata.raw.X integer values: True
+raw count min: 1.0
+raw count max: 8294.0
+
+Conclusion:
+Downsampled reference using raw counts was successfully prepared.

@@ -1,0 +1,14 @@
+nohup: ignoring input
+Keratinocytes valid markers: ['KRT14', 'KRT5', 'KRT1', 'KRT10']
+Fibroblast valid markers: ['COL1A1', 'COL1A2', 'DCN']
+T_cell valid markers: ['TRAC']
+Macrophage valid markers: ['C1QA', 'C1QB']
+DC valid markers: ['CD1C', 'FCER1A', 'CLEC10A']
+Vascular_endothelium valid markers: ['VWF', 'KDR']
+Lymphatic_endothelium valid markers: ['PROX1', 'PDPN']
+Mural_cell valid markers: ['RGS5', 'ACTA2', 'MCAM']
+Melanocyte valid markers: ['DCT']
+Mast_cell valid markers: ['TPSAB1']
+Schwann_cell valid markers: ['S100B', 'MPZ', 'PLP1', 'SOX10']
+B_cell valid markers: ['MS4A1', 'CD79A', 'CD74']
+Saved marker gene figures to: cell2location_run/results/figures/marker_genes

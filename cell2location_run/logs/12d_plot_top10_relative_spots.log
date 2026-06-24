@@ -1,0 +1,20 @@
+nohup: ignoring input
+Saved top 10% relative abundance spot figures to: cell2location_run/results/figures/spatial_relative_top10
+
+Top 10% summary:
+                 celltype  top10_threshold  top_spots
+0                  B cell         0.100426        170
+1                      DC         0.080268        170
+2              Fibroblast         0.105571        170
+3                     ILC         0.042825        170
+4           Keratinocytes         0.352244        170
+5   Lymphatic endothelium         0.070811        170
+6              Macrophage         0.066772        170
+7               Mast cell         0.135319        170
+8              Melanocyte         0.103372        170
+9              Mural cell         0.053810        170
+10           Schwann cell         0.250381        170
+11                 T cell         0.042057        170
+12   Vascular endothelium         0.063179        170
+
+Saved table: cell2location_run/results/top10_relative_spots_summary.csv

@@ -1,0 +1,12 @@
+nohup: ignoring input
+Spatial total counts summary:
+count     1691.000000
+mean       814.878179
+std       1594.359101
+min         13.000000
+25%        110.000000
+50%        205.000000
+75%        612.500000
+max      14820.000000
+Name: total_counts, dtype: float64
+Saved: cell2location_run/results/figures/qc/spatial_total_counts.png

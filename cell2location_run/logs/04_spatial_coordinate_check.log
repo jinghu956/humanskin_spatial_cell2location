@@ -1,0 +1,39 @@
+[Spatial coordinate check]
+
+Input files:
+input/GSM6578065_humanskin_RNA.tsv
+input/spatial_barcodes_index.txt
+
+spatial_barcodes_index.txt format:
+barcode    x    y
+
+Example:
+AACGTGATAACGTGAT    50    1
+AACGTGATAAACATCG    50    2
+AACGTGATATGCCTAA    50    3
+AACGTGATAGTGGTCA    50    4
+AACGTGATACCACTGT    50    5
+
+Barcode file spots:
+2500
+
+RNA spots:
+1691
+
+Overlap spots:
+1691
+
+RNA spots not in barcode file:
+0
+
+Barcode spots not in RNA matrix:
+809
+
+Interpretation:
+The chip contains 2500 theoretical spatial positions.
+The RNA matrix contains 1691 expressed / retained spots.
+All 1691 RNA spots have matched spatial coordinates.
+The remaining 809 barcode positions are likely empty or filtered spots.
+
+Conclusion:
+Spatial coordinate matching is successful.

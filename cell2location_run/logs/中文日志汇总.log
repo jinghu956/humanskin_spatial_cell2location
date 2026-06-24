@@ -1,0 +1,63 @@
+cell2location 原手写日志中文汇总
+
+00_environment_check.log
+这个日志用于检查 cell2location 运行环境是否可用。
+它确认当前使用的是 cell2loc_env 环境，Python 路径、pip 路径和主要包版本都正常。
+其中 cell2location、scvi-tools、scanpy、anndata、torch 等包都可以成功导入。
+同时确认 CUDA 可用，说明后续训练可以使用 GPU。
+
+01_reference_atlas_check.log
+这个日志用于检查参考单细胞图谱 adult_skin_atlas.h5ad 是否能正常读取。
+参考图谱包含 197812 个细胞和 36611 个基因。
+obs 中包含多个细胞注释列，例如 annotation_fine_adult、annotation_broad_adult 等。
+基因名是 gene symbol 格式，因此适合作为 cell2location 的 scRNA-seq reference。
+
+02_annotation_summary.log
+这个日志用于比较 reference 中不同细胞类型注释列是否适合用于 cell2location。
+annotation_fine 和 annotation_broad 等列不适合作为本次分析标签。
+annotation_broad_adult 覆盖所有 197812 个细胞，并包含 13 个成人皮肤主要细胞类型。
+因此最终选择 annotation_broad_adult 作为第一轮 cell2location 的 labels_key。
+
+03_spatial_rna_check.log
+这个日志用于检查空间 RNA 矩阵 input/GSM6578065_humanskin_RNA.tsv 的格式。
+结论是该矩阵为 spot x gene 格式，不需要转置。
+原始空间 RNA 矩阵大小为 1691 spots x 15486 genes。
+去除 ERCC spike-in 基因后，矩阵大小为 1691 spots x 15471 genes。
+最后成功生成了 cell2location_run/processed/spatial_rna.h5ad。
+
+04_spatial_coordinate_check.log
+这个日志用于检查空间坐标文件和 RNA spot 是否匹配。
+坐标文件 input/spatial_barcodes_index.txt 中共有 2500 个理论空间位置。
+RNA 矩阵中有 1691 个 spot，并且这 1691 个 spot 全部能在坐标文件中找到。
+坐标文件中多出来的 809 个位置可能是空点或被过滤掉的 spot。
+结论是空间坐标匹配成功。
+
+05_gene_overlap_check.log
+这个日志用于检查 reference 和 spatial RNA 之间的基因交集。
+reference 中有 36611 个基因，spatial RNA 中有 15471 个基因。
+两者共有 12846 个重叠基因。
+这个重叠数量足够用于 cell2location，因此 reference 和 spatial RNA 在基因层面是兼容的。
+
+06_reference_downsample.log
+这个日志记录了 reference 下采样过程。
+原始 reference 包含 197812 个细胞和 36611 个基因，数据量较大。
+为了减少计算时间和显存占用，并避免大细胞类型主导模型训练，每个 broad cell type 最多保留 5000 个细胞。
+下采样后 reference 变为 51485 个细胞和 36611 个基因。
+该日志还记录了一个关键修正：原始 adata.X 是 log-normalized 表达值，不适合训练 RegressionModel。
+真正的 raw count 数据存在 adata.raw.X 中，因此最终使用 adata.raw.X 构建 reference。
+
+07_reference_regression_training.log
+这个日志记录了 05_train_reference_regression.py 的 RegressionModel 训练结果。
+训练输入是下采样后的 reference：cell2location_run/processed/ref_broad_adult_downsample.h5ad。
+使用的细胞类型标签是 annotation_broad_adult。
+训练使用 GPU：NVIDIA A800-SXM4-80GB。
+训练参数为 max_epochs=250，batch_size=2500，train_size=1，accelerator=gpu。
+训练耗时约 42 分钟 21 秒，最终完成 250 个 epoch 并成功结束。
+随后导出了 posterior，并生成了 13 个 broad adult skin cell types 的 reference signature。
+输出包括 reference model、训练后的 h5ad，以及 inf_aver_broad_adult.csv。
+
+cell2location_run_summary.log
+这个日志是整个 cell2location 前期流程的总览。
+它汇总了运行环境、reference atlas、选择的细胞类型标签、空间 RNA 数据、空间坐标匹配、基因重叠、reference 下采样和 RegressionModel 训练结果。
+当前整体状态是 reference training 已完成。
+下一步可以继续运行空间 cell2location 模型，也就是 06_run_cell2location_broad.py。

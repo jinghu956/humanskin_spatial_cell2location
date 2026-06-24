@@ -1,0 +1,54 @@
+[03_check_gene_overlap.py]
+
+Command:
+python cell2location_run/scripts/03_check_gene_overlap.py
+
+Purpose:
+Check whether the reference atlas and spatial RNA matrix share enough genes for cell2location.
+
+Reference file:
+reference_atlas/adult_skin_atlas.h5ad
+
+Spatial file:
+cell2location_run/processed/spatial_rna.h5ad
+
+Reference shape:
+(197812, 36611)
+
+Spatial shape:
+(1691, 15471)
+
+Reference genes:
+36611
+
+Spatial genes:
+15471
+
+Overlap genes:
+12846
+
+First 20 overlapping genes:
+A1CF
+A2M
+A2ML1
+A4GALT
+AAAS
+AACS
+AADACL2
+AADACL3
+AAGAB
+AAK1
+AAMDC
+AAMP
+AAR2
+AARD
+AARS
+AARS2
+AARSD1
+AASDH
+AASDHPPT
+AASS
+
+Conclusion:
+Gene overlap is sufficient.
+The reference and spatial RNA matrices are compatible for cell2location.

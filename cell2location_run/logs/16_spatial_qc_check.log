@@ -1,0 +1,55 @@
+nohup: ignoring input
+Spatial AnnData shape: (1691, 15471)
+
+Total counts summary:
+count     1691.000000
+mean       814.878179
+std       1594.359101
+min         13.000000
+25%        110.000000
+50%        205.000000
+75%        612.500000
+max      14820.000000
+Name: total_counts, dtype: float64
+
+Detected genes per spot summary:
+count    1691.000000
+mean      410.772915
+std       598.686323
+min        11.000000
+25%        85.000000
+50%       153.000000
+75%       419.000000
+max      3738.000000
+Name: n_genes_by_counts, dtype: float64
+
+Mitochondrial percentage summary:
+count    1691.0
+mean        0.0
+std         0.0
+min         0.0
+25%         0.0
+50%         0.0
+75%         0.0
+max         0.0
+Name: pct_counts_mt, dtype: float64
+
+Gene detected spots summary:
+count    15471.000000
+mean        44.898003
+std         86.806360
+min          0.000000
+25%          3.000000
+50%         14.000000
+75%         54.000000
+max       1656.000000
+Name: detected_spots, dtype: float64
+
+Saved spot QC table:
+cell2location_run/results/spatial_spot_qc_metrics.csv
+
+Saved gene QC table:
+cell2location_run/results/spatial_gene_qc_metrics.csv
+
+Saved QC figures to:
+cell2location_run/results/figures/spatial_qc

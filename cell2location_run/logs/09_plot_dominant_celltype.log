@@ -1,0 +1,17 @@
+nohup: ignoring input
+Saved: cell2location_run/results/figures/dominant_celltype_spatial_map.png
+
+Dominant cell type counts:
+dominant_celltype
+Keratinocytes            1321
+Schwann cell              302
+Mast cell                  17
+Melanocyte                 15
+B cell                     13
+Fibroblast                  9
+Mural cell                  4
+Lymphatic endothelium       3
+Vascular endothelium        3
+DC                          3
+Macrophage                  1
+Name: count, dtype: int64

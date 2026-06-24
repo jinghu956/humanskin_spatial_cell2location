@@ -1,0 +1,21 @@
+nohup: ignoring input
+Relative abundance z-score summary:
+                        count          mean  std  ...       50%       75%        max
+B cell                 1691.0  1.512687e-16  1.0  ... -0.190510  0.429931   9.393265
+DC                     1691.0  1.932878e-16  1.0  ... -0.180522  0.468817  11.004373
+Fibroblast             1691.0  2.773260e-16  1.0  ... -0.128989  0.447658   6.892906
+ILC                    1691.0  1.428649e-16  1.0  ... -0.159572  0.364322  13.694191
+Keratinocytes          1691.0  1.050477e-16  1.0  ... -0.082837  0.522043   4.453447
+Lymphatic endothelium  1691.0 -4.033832e-16  1.0  ... -0.205752  0.440259   7.335338
+Macrophage             1691.0 -1.680763e-17  1.0  ... -0.220210  0.390027  10.003113
+Mast cell              1691.0 -1.512687e-16  1.0  ... -0.242684  0.325579  10.951559
+Melanocyte             1691.0  1.470668e-16  1.0  ... -0.209562  0.314708   9.828810
+Mural cell             1691.0  1.680763e-16  1.0  ... -0.185927  0.175980  23.376461
+Schwann cell           1691.0  6.723054e-17  1.0  ... -0.242966  0.422266   6.452163
+T cell                 1691.0 -6.723054e-17  1.0  ... -0.174856  0.403213  11.981984
+Vascular endothelium   1691.0 -1.092496e-16  1.0  ... -0.223365  0.357098   9.035868
+
+[13 rows x 8 columns]
+
+Saved z-score figures to: cell2location_run/results/figures/spatial_relative_abundance_zscore
+Saved table: cell2location_run/results/cell_abundance_broad_adult_relative_zscore_with_coords.csv
