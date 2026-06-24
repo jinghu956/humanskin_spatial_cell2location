@@ -1,29 +1,52 @@
-# System files
-.DS_Store
-__pycache__/
-*.py[cod]
-.ipynb_checkpoints/
-
-# Original input data and reference atlas
+# raw input data
 input/
+
+# reference atlas and public raw reference data
 reference_atlas/
 
-# Large derived AnnData files
+# cell2location large intermediate files
+cell2location_run/processed/
+cell2location_run/models/
+cell2location_run/logs/
+
+# large result objects
+cell2location_run/results/*.h5ad
+cell2location_run/results/*.h5
+cell2location_run/results/*.rds
+cell2location_run/results/*.rds.gz
+cell2location_run/results/*.RData
+
+# large bioinformatics files
 *.h5ad
 *.h5
 *.loom
+*.rds
+*.rds.gz
+*.RData
+*.mtx.gz
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+*.bam
+*.bai
+*.sam
+*.cram
+*.crai
 
-# Large or environment-specific cache/checkpoint files
-*.pkl
-*.pickle
-*.npz
-*.npy
-*.pt
-*.pth
-*.ckpt
+# logs and cache
+*.log
+nohup.out
+tmp/
+temp/
+.cache/
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
 
-# Keep lightweight processed tables, logs, scripts, models, figures, and CSV results tracked.
-!cell2location_run/processed/inf_aver_broad_adult.csv
-!cell2location_run/models/
-!cell2location_run/models/**/
-!cell2location_run/models/**/model.pt
+# editor/system
+.Rhistory
+.Rproj.user/
+.DS_Store
+.vscode/
+.cursor/
